@@ -89,7 +89,7 @@ func (e *Exporter) Collect(ch chan<- prometheus.Metric) {
 			}
 			ch <- prometheus.MustNewConstMetric(
 				desc,
-				prometheus.CounterValue,
+				prometheus.GaugeValue,
 				float64(metricValue),
 				strconv.Itoa(cpu),
 			)
